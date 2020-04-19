@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GROCERIES"
+        android:text="GROCERIES LIST"
         android:background="@drawable/background_primary"
         android:layout_marginTop="32dp"
         android:layout_marginRight="8dp"
