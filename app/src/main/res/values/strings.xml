@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Groceries list</string>
+    <string name="total_price">Total Price</string>
+    <string name="tslack_id_fola">\tSLACK ID: Fola</string>
+    <string name="tname_bello_yakub">\tNAME: Bello Yakub</string>
+    <string name="temail_hyaaquub_gmail_com">\tEMAIL: hyaaquub@gmail.com</string>
 </resources>
