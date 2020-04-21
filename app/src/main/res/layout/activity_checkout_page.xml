@@ -40,15 +40,33 @@
         android:layout_marginTop="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"/>
-
-    <ListView
-        android:id="@+id/list_view"
+    
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="@drawable/background_primary"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
+        android:orientation="horizontal"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp" />
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/background_primary">
+
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent" />
+
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_view"/>
+
+        <ListView
+            android:id="@+id/listview_price"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
 
 
     <TextView
@@ -74,6 +92,15 @@
         android:layout_marginBottom="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginLeft="8dp"/>
+    <Button
+        android:id="@+id/btn_share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHARE"
+        android:layout_gravity="center"
+        android:background="@drawable/background_primary"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
 
 
 </LinearLayout>

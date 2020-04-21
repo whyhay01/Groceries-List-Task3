@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
     private Button mButton_checkout;
     ArrayList<String> items_array = new ArrayList<String>();
     ArrayList<String> price_array_string = new ArrayList<String>();
-    ArrayList<Integer> price_array_int = new ArrayList<Integer>();
 
 
     @Override
@@ -81,45 +80,62 @@ public class MainActivity extends AppCompatActivity {
                 String getItem8 = mEdtTxt_item8.getText().toString();
                 items_array.add(getItem8);
 
+                int price1 =0;
                 String getPrice1 = mEdtTxt_price1.getText().toString();
                 price_array_string.add(getPrice1);
-                //int priceInt = Integer.parseInt(getPrice1);
-                //price_array_int.add(priceInt);
 
+
+                       price1 = Integer.parseInt(getPrice1);
+
+                int price2 =0;
                 String getPrice2 = mEdtTxt_price2.getText().toString();
                 price_array_string.add(getPrice2);
-                //int priceInt2 = Integer.parseInt(getPrice2);
-                //price_array_int.add(priceInt2);
 
+
+                        price2= Integer.parseInt(getPrice2);
+
+                int price3=0;
                 String getPrice3 = mEdtTxt_price3.getText().toString();
                 price_array_string.add(getPrice3);
-                //int priceInt3 = Integer.parseInt(getPrice3);
-                //price_array_int.add(priceInt3);
 
+
+                        price3= Integer.parseInt(getPrice3);
+
+                int price4 =0;
                 String getPrice4 = mEdtTxt_price4.getText().toString();
                 price_array_string.add(getPrice4);
-                //int priceInt4 = Integer.parseInt(getPrice4);
-                //price_array_int.add(priceInt4);
 
+
+                        price4= Integer.parseInt(getPrice4);
+
+
+                int price5;
                 String getPrice5 = mEdtTxt_price5.getText().toString();
                 price_array_string.add(getPrice5);
-                //int priceInt5 = Integer.parseInt(getPrice5);
-                //price_array_int.add(priceInt5);
 
+                        price5= Integer.parseInt(getPrice5);
+
+                int price6=0;
                 String getPrice6 = mEdtTxt_price6.getText().toString();
                 price_array_string.add(getPrice6);
-                //int priceInt6 = Integer.parseInt(getPrice6);
-                //price_array_int.add(priceInt6);
 
+
+                        price6= Integer.parseInt(getPrice6);
+
+                int price7=0;
                 String getPrice7 = mEdtTxt_price7.getText().toString();
                 price_array_string.add(getPrice7);
-                //int priceInt7 = Integer.parseInt(getPrice7);
-                //price_array_int.add(priceInt7);
 
+                        price7= Integer.parseInt(getPrice7);
+
+                int price8=0;
                 String getPrice8 = mEdtTxt_price8.getText().toString();
                 price_array_string.add(getPrice8);
-               // int priceInt8 = Integer.parseInt(getPrice8);
-                //price_array_int.add(priceInt8);
+
+
+                        price8= Integer.parseInt(getPrice8);
+
+                int priceSum = (price1+price2+price3+price4+price5+price6+price7+price8);
 
                 if (getItem1.trim().equals("")) {
                     Toast.makeText(MainActivity.this, "Item Input Field is Empty", Toast.LENGTH_SHORT).show();
@@ -130,7 +146,11 @@ public class MainActivity extends AppCompatActivity {
 
                 else {
                     Intent checkoutIntent = new Intent(MainActivity.this, Checkout_page.class);
+                    checkoutIntent.putExtra("items",items_array);
+                    checkoutIntent.putExtra("price",price_array_string);
+                    checkoutIntent.putExtra("totalPrice",priceSum);
                     startActivity(checkoutIntent);
+
                 }
 
             }
